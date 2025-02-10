@@ -1,5 +1,7 @@
 with Ada.Strings.Wide_Wide_Unbounded; use Ada.Strings.Wide_Wide_Unbounded;
 
+with ArraysHTSEB;
+
 package BetriebssystemKonstantenHTSEB is
    pragma Elaborate_Body;
    
@@ -47,10 +49,10 @@ package BetriebssystemKonstantenHTSEB is
    Unterstrich : constant Wide_Wide_Character := '_';
    Punkt : constant Wide_Wide_Character := '.';
    
-   VerboteneNamen : constant TextArrays.AllgemeinesTextArray (1 .. 2) := (
-                                                                          1 => To_Unbounded_Wide_Wide_String (Source => "."),
-                                                                          2 => To_Unbounded_Wide_Wide_String (Source => "..")
-                                                                         );
+   VerboteneNamen : constant ArraysHTSEB.AllgemeinesTextArray (1 .. 2) := (
+                                                                           1 => To_Unbounded_Wide_Wide_String (Source => "."),
+                                                                           2 => To_Unbounded_Wide_Wide_String (Source => "..")
+                                                                          );
    -- Allgemein
    
    
@@ -63,39 +65,39 @@ package BetriebssystemKonstantenHTSEB is
    
    -- Windows
    -- Auch verboten mit Dateierweiterung!
-   VerboteneWindowsnamenDrei : constant TextArrays.AllgemeinesTextArray (1 .. 4) := (
-                                                                                     1 => To_Unbounded_Wide_Wide_String (Source => "AUX"),
-                                                                                     2 => To_Unbounded_Wide_Wide_String (Source => "CON"),
-                                                                                     3 => To_Unbounded_Wide_Wide_String (Source => "PRN"),
-                                                                                     4 => To_Unbounded_Wide_Wide_String (Source => "NUL")
-                                                                                    );
-   
-   VerboteneWindowsnamenVier : constant TextArrays.AllgemeinesTextArray (1 .. 20) := (
-                                                                                      1 => To_Unbounded_Wide_Wide_String (Source => "COM0"),
-                                                                                      2 => To_Unbounded_Wide_Wide_String (Source => "COM1"),
-                                                                                      3 => To_Unbounded_Wide_Wide_String (Source => "COM2"),
-                                                                                      4 => To_Unbounded_Wide_Wide_String (Source => "COM3"),
-                                                                                      5 => To_Unbounded_Wide_Wide_String (Source => "COM4"),
-                                                                                      6 => To_Unbounded_Wide_Wide_String (Source => "COM5"),
-                                                                                      7 => To_Unbounded_Wide_Wide_String (Source => "COM6"),
-                                                                                      8 => To_Unbounded_Wide_Wide_String (Source => "COM7"),
-                                                                                      9 => To_Unbounded_Wide_Wide_String (Source => "COM8"),
-                                                                                      10 => To_Unbounded_Wide_Wide_String (Source => "COM9"),
-                                                                                      11 => To_Unbounded_Wide_Wide_String (Source => "LPT0"),
-                                                                                      12 => To_Unbounded_Wide_Wide_String (Source => "LPT1"),
-                                                                                      13 => To_Unbounded_Wide_Wide_String (Source => "LPT2"),
-                                                                                      14 => To_Unbounded_Wide_Wide_String (Source => "LPT3"),
-                                                                                      15 => To_Unbounded_Wide_Wide_String (Source => "LPT4"),
-                                                                                      16 => To_Unbounded_Wide_Wide_String (Source => "LPT5"),
-                                                                                      17 => To_Unbounded_Wide_Wide_String (Source => "LPT6"),
-                                                                                      18 => To_Unbounded_Wide_Wide_String (Source => "LPT7"),
-                                                                                      19 => To_Unbounded_Wide_Wide_String (Source => "LPT8"),
-                                                                                      20 => To_Unbounded_Wide_Wide_String (Source => "LPT9")
+   VerboteneWindowsnamenDrei : constant ArraysHTSEB.AllgemeinesTextArray (1 .. 4) := (
+                                                                                      1 => To_Unbounded_Wide_Wide_String (Source => "AUX"),
+                                                                                      2 => To_Unbounded_Wide_Wide_String (Source => "CON"),
+                                                                                      3 => To_Unbounded_Wide_Wide_String (Source => "PRN"),
+                                                                                      4 => To_Unbounded_Wide_Wide_String (Source => "NUL")
                                                                                      );
    
-   VerboteneWindowsnamenFünf : constant TextArrays.AllgemeinesTextArray (1 .. 1) := (
-                                                                                      1 => To_Unbounded_Wide_Wide_String (Source => "CLOCK$")
-                                                                                     );
+   VerboteneWindowsnamenVier : constant ArraysHTSEB.AllgemeinesTextArray (1 .. 20) := (
+                                                                                       1 => To_Unbounded_Wide_Wide_String (Source => "COM0"),
+                                                                                       2 => To_Unbounded_Wide_Wide_String (Source => "COM1"),
+                                                                                       3 => To_Unbounded_Wide_Wide_String (Source => "COM2"),
+                                                                                       4 => To_Unbounded_Wide_Wide_String (Source => "COM3"),
+                                                                                       5 => To_Unbounded_Wide_Wide_String (Source => "COM4"),
+                                                                                       6 => To_Unbounded_Wide_Wide_String (Source => "COM5"),
+                                                                                       7 => To_Unbounded_Wide_Wide_String (Source => "COM6"),
+                                                                                       8 => To_Unbounded_Wide_Wide_String (Source => "COM7"),
+                                                                                       9 => To_Unbounded_Wide_Wide_String (Source => "COM8"),
+                                                                                       10 => To_Unbounded_Wide_Wide_String (Source => "COM9"),
+                                                                                       11 => To_Unbounded_Wide_Wide_String (Source => "LPT0"),
+                                                                                       12 => To_Unbounded_Wide_Wide_String (Source => "LPT1"),
+                                                                                       13 => To_Unbounded_Wide_Wide_String (Source => "LPT2"),
+                                                                                       14 => To_Unbounded_Wide_Wide_String (Source => "LPT3"),
+                                                                                       15 => To_Unbounded_Wide_Wide_String (Source => "LPT4"),
+                                                                                       16 => To_Unbounded_Wide_Wide_String (Source => "LPT5"),
+                                                                                       17 => To_Unbounded_Wide_Wide_String (Source => "LPT6"),
+                                                                                       18 => To_Unbounded_Wide_Wide_String (Source => "LPT7"),
+                                                                                       19 => To_Unbounded_Wide_Wide_String (Source => "LPT8"),
+                                                                                       20 => To_Unbounded_Wide_Wide_String (Source => "LPT9")
+                                                                                      );
+   
+   VerboteneWindowsnamenFünf : constant ArraysHTSEB.AllgemeinesTextArray (1 .. 1) := (
+                                                                                       1 => To_Unbounded_Wide_Wide_String (Source => "CLOCK$")
+                                                                                      );
    
    -- Das auch noch hinzufügen? äöü
    -- Sollte nur im Rootverzeichnis gelten, aber man weiß ja nie.

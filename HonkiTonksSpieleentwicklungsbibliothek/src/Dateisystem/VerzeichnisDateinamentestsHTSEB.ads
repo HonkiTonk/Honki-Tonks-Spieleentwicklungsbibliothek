@@ -1,6 +1,8 @@
-with Ada.Wide_Wide_Characters.Handling; use Ada.Wide_Wide_Characters.Handling;
+with Ada.Strings.Wide_Wide_Unbounded; use Ada.Strings.Wide_Wide_Unbounded;
 
-with BetriebssystemKonstantenHTSEB;
+private with Ada.Directories;
+
+with SystemRecordsHTSEB;
 
 package VerzeichnisDateinamentestsHTSEB is
    pragma Elaborate_Body;
@@ -56,7 +58,7 @@ package VerzeichnisDateinamentestsHTSEB is
 
    function Namensprüfungen
      (TextExtern : in Unbounded_Wide_Wide_String)
-      return SystemRecords.TextEingabeRecord
+      return SystemRecordsHTSEB.TextEingabeRecord
      with
        Pre => (
                  To_Wide_Wide_String (Source => TextExtern)'Length > 0
@@ -79,20 +81,20 @@ private
 
    Text : Unbounded_Wide_Wide_String;
 
-   type ZeichenabzugArray is array (BetriebssystemDatentypen.Betriebsystem_Zeichenabzug_Enum'Range, SystemDatentypen.Zeichenabzug_Enum'Range) of Natural;
-   Zeichenabzug : constant ZeichenabzugArray := (BetriebssystemDatentypen.Windows_Enum =>
-                                                   (
-                                                    SystemDatentypen.Speichern_Enum => VerzeichnisKonstanten.ExtrazeichenSpielstand,
-                                                    SystemDatentypen.Text_Enum      => 0,
-                                                    SystemDatentypen.Texturen_Enum  => 0
-                                                   )
-                                                );
+  -- type ZeichenabzugArray is array (BetriebssystemDatentypenHTSEB.Betriebsystem_Zeichenabzug_Enum'Range, SystemDatentypen.Zeichenabzug_Enum'Range) of Natural;
+  -- Zeichenabzug : constant ZeichenabzugArray := (BetriebssystemDatentypenHTSEB.Windows_Enum =>
+  --                                                 (
+  --                                                  SystemDatentypen.Speichern_Enum => VerzeichnisKonstanten.ExtrazeichenSpielstand,
+  --                                                  SystemDatentypen.Text_Enum      => 0,
+   --                                                 SystemDatentypen.Texturen_Enum  => 0
+   --                                                )
+   --                                             );
 
 
 
    function NamenprüfungenWindows
      (TextExtern : in Unbounded_Wide_Wide_String)
-      return SystemRecords.TextEingabeRecord
+      return SystemRecordsHTSEB.TextEingabeRecord
      with
        Pre => (
                  To_Wide_Wide_String (Source => TextExtern)'Length > 0

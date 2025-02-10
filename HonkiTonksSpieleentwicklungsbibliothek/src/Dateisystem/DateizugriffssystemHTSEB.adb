@@ -1,7 +1,7 @@
 -- Eine Prozedur für das Schließen einzubauen ist sinnfrei.
 -- Es gibt keine verschiedenen Varianten des Schließens und den Paketzugriff bekomme ich auch nicht raus, da ich ja immer noch das File_Type aus dem Standardpaket brauche.
 
-with DateizugriffsvariablenHTSEB;
+with DateisystemvariablenHTSEB;
 
 package body DateizugriffssystemHTSEB is
 
@@ -15,7 +15,7 @@ package body DateizugriffssystemHTSEB is
       Create (File => DateiartExtern,
               Mode => Out_File,
               Name => NameExtern,
-              Form => DateizugriffsvariablenHTSEB.DateiformAbfragen);
+              Form => DateisystemvariablenHTSEB.DateiformAbfragen);
       
    end ErstellenStream;
    
@@ -31,7 +31,7 @@ package body DateizugriffssystemHTSEB is
       Open (File => DateiartExtern,
             Mode => In_File,
             Name => NameExtern,
-            Form => DateizugriffsvariablenHTSEB.DateiformAbfragen);
+            Form => DateisystemvariablenHTSEB.DateiformAbfragen);
       
    end ÖffnenStream;
    
@@ -47,7 +47,7 @@ package body DateizugriffssystemHTSEB is
       Create (File => DateiartExtern,
               Mode => Out_File,
               Name => NameExtern,
-              Form => DateizugriffsvariablenHTSEB.DateiformAbfragen);
+              Form => DateisystemvariablenHTSEB.DateiformAbfragen);
       
    end ErstellenText;
    
@@ -63,7 +63,7 @@ package body DateizugriffssystemHTSEB is
       Open (File => DateiartExtern,
             Mode => In_File,
             Name => NameExtern,
-            Form => DateizugriffsvariablenHTSEB.DateiformAbfragen);
+            Form => DateisystemvariablenHTSEB.DateiformAbfragen);
       
    end ÖffnenText;
    
@@ -79,10 +79,8 @@ package body DateizugriffssystemHTSEB is
       Open (File => DateiartExtern,
             Mode => Append_File,
             Name => NameExtern,
-            Form => DateizugriffsvariablenHTSEB.DateiformAbfragen);
+            Form => DateisystemvariablenHTSEB.DateiformAbfragen);
       
    end ErweiternText;
-
-   
 
 end DateizugriffssystemHTSEB;

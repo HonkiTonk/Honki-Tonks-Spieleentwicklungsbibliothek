@@ -3,6 +3,8 @@ with Ada.Directories;
 with Ada.Float_Text_IO;
 with Ada.Text_IO;
 
+with DateizugriffssystemHTSEB;
+
 package body DiagnosesystemHTSEB is
    
    procedure Größenprüfung
@@ -144,11 +146,9 @@ package body DiagnosesystemHTSEB is
          Put_Line (Item => DateilängeSchleifenwert'Wide_Wide_Image);
          
          Zwischenspeicher := Zwischenspeicher & "a";
-      
-         Ada.Streams.Stream_IO.Create (File => DateiSpeichern,
-                                       Mode => Ada.Streams.Stream_IO.Out_File,
-                                       Name => To_String (Source => Zwischenspeicher),
-                                       Form => "WCEM=8");
+         
+         DateizugriffssystemHTSEB.ErstellenStream (DateiartExtern => DateiSpeichern,
+                                                   NameExtern     => To_String (Source => Zwischenspeicher));
             
          Close (File => DateiSpeichern);
          

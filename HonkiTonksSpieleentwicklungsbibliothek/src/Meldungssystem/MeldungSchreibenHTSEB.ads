@@ -20,10 +20,9 @@ package MeldungSchreibenHTSEB is
 private
    use Ada.Wide_Wide_Text_IO;
    
-   -- Diese Dinge noch anpassbar machen? äöü
+   -- Das noch anpassbar machen? äöü
    -- Dann müsste man aber auch prüfen ob das gültige Angaben sind, eventuell später einbauen. äöü
    Meldungen : constant String (1 .. 9) := "Meldungen";
-   Dateiform : constant String (1 .. 6) := "WCEM=8";
    
    Wartezeit : constant Duration := 0.002;
          

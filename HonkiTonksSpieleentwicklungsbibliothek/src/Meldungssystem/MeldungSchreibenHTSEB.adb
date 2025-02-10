@@ -5,6 +5,8 @@ with Ada.Exceptions;
 with Ada.Calendar;
 with Ada.Calendar.Formatting;
 
+with DateisystemvariablenHTSEB;
+
 package body MeldungSchreibenHTSEB is
 
    procedure Meldung
@@ -30,13 +32,13 @@ package body MeldungSchreibenHTSEB is
             Open (File => DateiMeldung,
                   Mode => Append_File,
                   Name => Meldungen,
-                  Form => Dateiform);
+                  Form => DateisystemvariablenHTSEB.DateiformAbfragen);
             
          when False =>
             Create (File => DateiMeldung,
                     Mode => Out_File,
                     Name => Meldungen,
-                    Form => Dateiform);
+                    Form => DateisystemvariablenHTSEB.DateiformAbfragen);
       end case;
       
       Put (File => DateiMeldung,
