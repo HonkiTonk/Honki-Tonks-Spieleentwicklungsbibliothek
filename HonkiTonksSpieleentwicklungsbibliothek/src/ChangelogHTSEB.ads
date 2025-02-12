@@ -1,9 +1,22 @@
 package ChangelogHTSEB is
    pragma Pure;
    
-   -- Version 0.01.0100 => 0.01. ():
+   -- Version 0.01.0200 => 0.01. ():
    
-   --
+   -- 
+   
+   
+   
+   -- Version 0.01.0100 => 0.01.0200 (12.02.2025):
+   
+   -- Es wird jetzt auch die Versionsnummer mit in die Fehlermeldung geschrieben.
+   -- Mehr Exceptions hinzugefügt.
+   -- Falsche Fehlermeldungen korrigiert.
+   -- Die Bibliothek sollte jetzt überall ihre eigene Enocde/Decode Variante verwenden.
+   -- Internet Benennung überarbeitet.
+   -- Das Dateizugriffssystem hat jetzt auch Prozeduren/Funktionen für Wide_Wide und Unbounded_Wide_Wide.
+   -- Den Zugriff auf Teile der Standardbibliothek weiter eingeschränkt.
+   -- Kleinigkeiten angepasst.
    
    
    
@@ -12,7 +25,7 @@ package ChangelogHTSEB is
    -- Diverse Datentypen hinzugefügt.
    -- Diverse Records hinzugefügt.
    -- Diverse Konstanten hinzugefügt.
-   -- Benennungen undAufteilung überarbeitet.
+   -- Benennungen und Aufteilung überarbeitet.
    -- Alle Fehler korrigiert die ein Kompilieren verhinderten.
    
    
