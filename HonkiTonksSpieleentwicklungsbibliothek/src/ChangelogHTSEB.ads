@@ -1,9 +1,17 @@
 package ChangelogHTSEB is
    pragma Pure;
    
-   -- Version 0.01.0200 => 0.01. ():
+   -- Version 0.01.0250 => 0.01. ():
    
    -- 
+   
+   
+   
+   -- Version 0.01.0200 => 0.01.0250 (13.02.2025):
+   
+   -- Lokale Pragmas angepasst, um Fehler zu beheben die beim Kompilieren mit meinem Spiel entstehen.
+   -- Falsche Fehlermeldungen korrigiert.
+   -- Kleinigkeiten korrigiert.
    
    
    
