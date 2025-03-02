@@ -1,9 +1,17 @@
 package ChangelogHTSEB is
    pragma Pure;
    
-   -- Version 0.01.0250 => 0.01. ():
+   -- Version 0.01.0300 => 0.01. ():
    
    -- 
+   
+   
+   
+   -- Version 0.01.0250 => 0.01.0300 (02.03.2025):
+   
+   -- Wechsel der Kodierung überabeitet.
+   -- Schließen Prozeduren in DateizugriffssystemHTSEB eingebaut.
+   -- Kleinigkeiten angepasst.
    
    
    
@@ -11,7 +19,7 @@ package ChangelogHTSEB is
    
    -- Lokale Pragmas angepasst, um Fehler zu beheben die beim Kompilieren mit meinem Spiel entstehen.
    -- Falsche Fehlermeldungen korrigiert.
-   -- Kleinigkeiten korrigiert.
+   -- Kleinigkeiten überarbeitet.
    
    
    
