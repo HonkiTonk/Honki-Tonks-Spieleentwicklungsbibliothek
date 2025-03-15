@@ -10,7 +10,7 @@ package ChangelogHTSEB is
    -- Version 0.01.0400 => 0.01.0450 (15.03.2025):
    
    -- Fehlermeldungen an die letzten Änderungen angepasst.
-   -- Ungenutzte Variablen entfernt die Probleme bereiten konnte wenn man die Bibliothek eingebunden hat.
+   -- Ungenutzte Variablen entfernt die Probleme bereiten konnten wenn man die Bibliothek eingebunden hat.
    
    
    
