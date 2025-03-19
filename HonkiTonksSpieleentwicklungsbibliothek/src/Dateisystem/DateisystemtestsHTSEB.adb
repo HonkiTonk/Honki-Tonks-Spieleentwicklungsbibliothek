@@ -49,31 +49,6 @@ package body DateisystemtestsHTSEB is
    
    
    function Standardeinleseprüfung
-     (VerzeichnisDateinameExtern : in Wide_Wide_String)
-      return Boolean
-   is begin
-      
-      if
-        --    False = GültigeZeichenlänge (TextExtern         => To_Unbounded_Wide_Wide_String (Source => VerzeichnisDateinameExtern),
-        ----                                  ZeichenabzugExtern => SystemDatentypen.Text_Enum)
-        --  then
-        --     return False;
-            
-      --   elsif
-        Exists (Name => UmwandlungssystemHTSEB.Encode (TextExtern => VerzeichnisDateinameExtern)) = False
-      then
-         MeldungssystemHTSEB.Logik (MeldungExtern => "DateisystemtestsHTSEB.Standardeinleseprüfung: Es fehlt: " & VerzeichnisDateinameExtern);
-         return False;
-            
-      else
-         return True;
-      end if;
-      
-   end Standardeinleseprüfung;
-   
-   
-   
-   function StandardeinleseprüfungNeu
      (LinuxTextExtern : in Wide_Wide_String;
       WindowsTextExtern : in Wide_Wide_String)
       return Boolean
@@ -95,7 +70,7 @@ package body DateisystemtestsHTSEB is
          return True;
       end if;
       
-   end StandardeinleseprüfungNeu;
+   end Standardeinleseprüfung;
    
    
    
@@ -124,7 +99,6 @@ package body DateisystemtestsHTSEB is
    
    
    
-   -- Das hier kann ausgelagert werden. äöü
    function GültigesZeichen
      (ZeichenExtern : in Wide_Wide_Character)
       return Boolean
@@ -152,13 +126,13 @@ package body DateisystemtestsHTSEB is
                when '\' | '/' | ':' | '*' | '?' | '"' | '<' | '>' | '|' | BetriebssystemKonstantenHTSEB.NUL .. BetriebssystemKonstantenHTSEB.US =>
                   return False;
             
-              -- when 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | BetriebssystemKonstantenHTSEB.Leerzeichen | BetriebssystemKonstantenHTSEB.Bindestrich
-              --    | BetriebssystemKonstantenHTSEB.Unterstrich | BetriebssystemKonstantenHTSEB.Punkt =>
-              --    return True;
+               when 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | BetriebssystemKonstantenHTSEB.Leerzeichen | BetriebssystemKonstantenHTSEB.Bindestrich
+                  | BetriebssystemKonstantenHTSEB.Unterstrich | BetriebssystemKonstantenHTSEB.Punkt =>
+                  return True;
             
                when others =>
                   -- Für den Fall das ich irgendwann einmal Wide_Wide_Directories haben kann ich hier True zurückgeben und damit alle Zeichen erlauben die nicht verboten sind. äöü
-                  return True; -- False;
+                  return False;
             end case;
       end case;
       
@@ -166,7 +140,6 @@ package body DateisystemtestsHTSEB is
    
    
    
-   -- Das hier auch. äöü
    function GültigerNamen
      (NameExtern : in Wide_Wide_String)
       return Boolean
@@ -212,15 +185,15 @@ package body DateisystemtestsHTSEB is
                case
                  NameExtern (WindowsprüfungSchleifenwert)
                is
-                  -- when 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | BetriebssystemKonstantenHTSEB.Leerzeichen | BetriebssystemKonstantenHTSEB.Bindestrich
-                  --    | BetriebssystemKonstantenHTSEB.Unterstrich | BetriebssystemKonstantenHTSEB.Punkt =>
-                  --    null;
+                  when 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | BetriebssystemKonstantenHTSEB.Leerzeichen | BetriebssystemKonstantenHTSEB.Bindestrich
+                     | BetriebssystemKonstantenHTSEB.Unterstrich | BetriebssystemKonstantenHTSEB.Punkt =>
+                     null;
                      
                   when '\' | '/' | ':' | '*' | '?' | '"' | '<' | '>' | '|' | BetriebssystemKonstantenHTSEB.NUL .. BetriebssystemKonstantenHTSEB.US =>
                      return False;
                
                   when others =>
-                     null; -- return False;
+                     return False;
                end case;
          
             end loop WindowsprüfungSchleife;
@@ -232,7 +205,6 @@ package body DateisystemtestsHTSEB is
    
    
    
-   -- Das auch. äöü
    function Namensprüfungen
      (TextExtern : in Unbounded_Wide_Wide_String)
       return SystemRecordsHTSEB.TextEingabeRecord
@@ -266,7 +238,6 @@ package body DateisystemtestsHTSEB is
    
    
    
-   -- Das auch. äöü
    function NamenprüfungenWindows
      (TextExtern : in Unbounded_Wide_Wide_String)
       return SystemRecordsHTSEB.TextEingabeRecord
