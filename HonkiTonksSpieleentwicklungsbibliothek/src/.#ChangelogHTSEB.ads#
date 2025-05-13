@@ -1,11 +1,13 @@
 package ChangelogHTSEB is
    pragma Pure;
    
-   -- Version 0.01. => 0.01. (.2025):
+   -- Version 0.01.0750 => 0.01. (.2025):
+   
+   -- 
    
    
    
-   -- Version 0.01.0700 => 0.01. (13.05.2025):
+   -- Version 0.01.0700 => 0.01.0750 (13.05.2025):
    
    -- Löschen Prozeduren für Dateien hinzugefügt.
    -- Byte Datentypen hinzugefügt.
