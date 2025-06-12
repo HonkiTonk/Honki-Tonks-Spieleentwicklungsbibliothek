@@ -10,7 +10,7 @@ package ChangelogHTSEB is
    -- Version 0.01.0900 => 0.01.1000 (12.06.2025):
    
    -- Namensprüfung für Windows überarbeitet.
-   -- Ladezeit Datentype hinzugefügt.
+   -- Ladezeit Datentyp hinzugefügt.
    -- Verzeichniskonstanten überarbeitet.
    
    
