@@ -1,17 +1,18 @@
 package ChangelogHTSEB is
    pragma Pure;
    
-   -- Version 0.01.1000 => 0.01. (.2025):
+   -- Version 0.01.1100 => 0.01. (.2025):
    
    -- 
    
    
    
-   -- Version 0.01.0900 => 0.01.1000 (12.06.2025):
+   -- Version 0.01.0900 => 0.01.1100 (12.06.2025):
    
    -- Namensprüfung für Windows überarbeitet.
    -- Ladezeit Datentyp hinzugefügt.
    -- Verzeichniskonstanten überarbeitet.
+   -- Textkonstanten überarbeitet.
    
    
    
