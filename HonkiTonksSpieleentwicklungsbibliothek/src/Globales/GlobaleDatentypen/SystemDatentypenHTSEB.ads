@@ -16,6 +16,9 @@ package SystemDatentypenHTSEB is
    type NullBisHundert is range 0 .. 100;
    subtype EinsBisHundert is NullBisHundert range 1 .. NullBisHundert'Last;
    
+   subtype Ladezeit is Float range 0.00 .. 100.00;
+   subtype LadezeitVorhanden is Ladezeit range 1.00 .. Ladezeit'Last;
+   
    
    
    subtype EigenerInteger is Integer range -1_000_000_000 .. 1_000_000_000;
@@ -28,5 +31,8 @@ package SystemDatentypenHTSEB is
    type EinByte is mod 2**8;
    type ZweiByte is mod 2**16;
    type VierByte is mod 2**32;
+   
+   type EinByteVorzeichen is range -128 .. 127;
+   type ZweiByteVorzeichen is range -32_768 .. 32_767;
 
 end SystemDatentypenHTSEB;
