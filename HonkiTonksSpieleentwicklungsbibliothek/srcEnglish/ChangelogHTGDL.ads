@@ -1,4 +1,4 @@
-package ChangelogHTSEB is
+package ChangelogHTGDL is
    pragma Pure;
    
    -- Version 0.01.2000 => 0.01. (.2025):
@@ -9,18 +9,18 @@ package ChangelogHTSEB is
    
    -- Version 0.01.1200 => 0.01.2000 (27.07.2025):
    
-   -- Unnötige Datentypen in BetriebssystemDatentypen entfernt.
-   -- Übriggebliebene Variablen entfernt.
-   -- Kleinigkeiten angepasst.
-   -- Englische Version hinzugefügt.
+   -- Unnecessary data types removed from OperatingSystemDataTypes.
+   -- Leftover variables removed.
+   -- Minor adjustments made.
+   -- English version added.
    
    
    
    -- Version 0.01.1100 => 0.01.1200 (21.07.2025):
    
-   -- TextKonstanten überarbeitet.
-   -- SystemDatentypen erweitert.
-   -- SystemKonstanten erweitert.
+   -- TextConstants revised.
+   -- SystemDataTypes expanded.
+   -- SystemConstants expanded.
    
    
    
@@ -28,8 +28,8 @@ package ChangelogHTSEB is
    
    -- Namensprüfung für Windows überarbeitet.
    -- Ladezeit Datentyp hinzugefügt.
-   -- VerzeichnisKonstanten überarbeitet.
-   -- TextKonstanten überarbeitet.
+   -- Verzeichniskonstanten überarbeitet.
+   -- Textkonstanten überarbeitet.
    
    
    
@@ -61,7 +61,7 @@ package ChangelogHTSEB is
    
    -- Version 0.01.0600 => 0.01.0650 (31.03.2025):
    
-   -- Die Lizenz von GPL v3.0 auf EUPL v1.2 geändert.
+   -- The licence has been changed from GPL v3.0 to EUPL v1.2.
    
    
    
@@ -97,7 +97,7 @@ package ChangelogHTSEB is
    
    -- Fehlermeldungen an die letzten Änderungen angepasst.
    -- Allgemeine Prüfungen für das Einlesen von Text eingebaut.
-   -- Kleinigkeiten angepasst.
+   -- Minor adjustments made.
    
    
    
@@ -105,7 +105,7 @@ package ChangelogHTSEB is
    
    -- Prüfung ob die Systemsprache eine der vorhandenen Sprachen entspricht eingebaut.
    -- Einige Datentypen hinzugefügt.
-   -- Kleinigkeiten angepasst.
+   -- Minor adjustments made.
    
    
    
@@ -113,7 +113,7 @@ package ChangelogHTSEB is
    
    -- Wechsel der Kodierung überabeitet.
    -- Schließen Prozeduren in DateizugriffssystemHTSEB eingebaut.
-   -- Kleinigkeiten angepasst.
+   -- Minor adjustments made.
    
    
    
@@ -121,20 +121,20 @@ package ChangelogHTSEB is
    
    -- Lokale Pragmas angepasst, um Fehler zu beheben die beim Kompilieren mit meinem Spiel entstehen.
    -- Falsche Fehlermeldungen korrigiert.
-   -- Kleinigkeiten überarbeitet.
+   -- Minor details revised.
    
    
    
    -- Version 0.01.0100 => 0.01.0200 (12.02.2025):
    
    -- Es wird jetzt auch die Versionsnummer mit in die Fehlermeldung geschrieben.
-   -- Mehr Exceptions hinzugefügt.
+   -- Added more Exceptions.
    -- Falsche Fehlermeldungen korrigiert.
    -- Die Bibliothek sollte jetzt überall ihre eigene Enocde/Decode Variante verwenden.
    -- Internet Benennung überarbeitet.
    -- Das Dateizugriffssystem hat jetzt auch Prozeduren/Funktionen für Wide_Wide und Unbounded_Wide_Wide.
    -- Den Zugriff auf Teile der Standardbibliothek weiter eingeschränkt.
-   -- Kleinigkeiten angepasst.
+   -- Minor adjustments made.
    
    
    
@@ -150,13 +150,13 @@ package ChangelogHTSEB is
 
    -- Version 0.01.0000 => 0.01.0030 (08.02.2025):
 
-   -- README angepasst.
-   -- Kleinigkeiten korrigiert.
+   -- README adjusted.
+   -- Minor corrections made.
 
 
    
    -- Version 0.01.0000 (08.02.2025):
    
-   -- Erste Veröffentlichung.
+   -- First release.
 
-end ChangelogHTSEB;
+end ChangelogHTGDL;

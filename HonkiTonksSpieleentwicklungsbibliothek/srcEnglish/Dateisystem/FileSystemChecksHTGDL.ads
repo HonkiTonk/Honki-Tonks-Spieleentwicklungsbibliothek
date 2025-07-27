@@ -2,12 +2,12 @@ with Ada.Strings.Wide_Wide_Unbounded; use Ada.Strings.Wide_Wide_Unbounded;
 
 private with Ada.Directories;
 
-with SystemRecordsHTSEB;
+with SystemRecordsHTGDL;
 
-package DateisystemtestsHTSEB is
+package FileSystemChecksHTGDL is
    pragma Elaborate_Body;
 
-   function GültigeZeichenlänge
+   function ValidCharacterLength
      (LinuxTextExtern : in Unbounded_Wide_Wide_String;
       WindowsTextExtern : in Unbounded_Wide_Wide_String)
       return Boolean
@@ -16,7 +16,7 @@ package DateisystemtestsHTSEB is
                  To_Wide_Wide_String (Source => WindowsTextExtern)'Length >= To_Wide_Wide_String (Source => LinuxTextExtern)'Length
               );
 
-   function Standardeinleseprüfung
+   function StandardChecksReport
      (LinuxTextExtern : in Wide_Wide_String;
       WindowsTextExtern : in Wide_Wide_String)
       return Boolean
@@ -25,7 +25,7 @@ package DateisystemtestsHTSEB is
                  WindowsTextExtern'Length >= LinuxTextExtern'Length
               );
 
-   function StandardwerteEinleseprüfung
+   function StandardChecks
      (LinuxTextExtern : in Wide_Wide_String;
       WindowsTextExtern : in Wide_Wide_String)
       return Boolean
@@ -34,11 +34,11 @@ package DateisystemtestsHTSEB is
                  WindowsTextExtern'Length >= LinuxTextExtern'Length
               );
 
-   function GültigesZeichen
-     (ZeichenExtern : in Wide_Wide_Character)
+   function ValidCharacter
+     (CharacterExtern : in Wide_Wide_Character)
       return Boolean;
 
-   function GültigerNamen
+   function ValidName
      (NameExtern : in Wide_Wide_String)
       return Boolean
      with
@@ -46,46 +46,46 @@ package DateisystemtestsHTSEB is
                  NameExtern'Length > 0
               );
 
-   function Namensprüfungen
+   function NameChecks
      (TextExtern : in Unbounded_Wide_Wide_String)
-      return SystemRecordsHTSEB.TextEingabeRecord
+      return SystemRecordsHTGDL.TextEntryRecord
      with
        Post => (
-                  if Namensprüfungen'Result.ErfolgreichAbbruch = True then To_Wide_Wide_String (Source => Namensprüfungen'Result.EingegebenerText)'Length > 0
+                  if NameChecks'Result.SuccessfulAbortion = True then To_Wide_Wide_String (Source => NameChecks'Result.TextEntry)'Length > 0
                );
 
 private
    use Ada.Directories;
 
-   LängeAktuellesVerzeichnis : constant Positive := Current_Directory'Length;
+   LengthCurrentDirectory : constant Positive := Current_Directory'Length;
 
-   Zwischenspeicher : Wide_Wide_String (1 .. 3);
+   TemporaryStorage : Wide_Wide_String (1 .. 3);
 
-   FünferText : Wide_Wide_String (1 .. 5);
+   FiveText : Wide_Wide_String (1 .. 5);
 
    Text : Unbounded_Wide_Wide_String;
 
 
 
-   function NamenprüfungenWindows
+   function NameChecksWindows
      (TextExtern : in Unbounded_Wide_Wide_String)
-      return SystemRecordsHTSEB.TextEingabeRecord
+      return SystemRecordsHTGDL.TextEntryRecord
      with
        Pre => (
                  To_Wide_Wide_String (Source => TextExtern)'Length > 0
               ),
 
        Post => (
-                  if NamenprüfungenWindows'Result.ErfolgreichAbbruch = True then To_Wide_Wide_String (Source => NamenprüfungenWindows'Result.EingegebenerText)'Length > 0
+                  if NameChecksWindows'Result.SuccessfulAbortion = True then To_Wide_Wide_String (Source => NameChecksWindows'Result.TextEntry)'Length > 0
                );
 
-   function PrüfungDrei
+   function CheckThree
      (TextExtern : in Wide_Wide_String;
-      VerbotenerTextExtern : in Wide_Wide_String)
+      ForbiddenTextExtern : in Wide_Wide_String)
       return Boolean
      with
        Pre => (
-                 VerbotenerTextExtern'Length in 3 .. 5
+                 ForbiddenTextExtern'Length in 3 .. 5
               );
 
-end DateisystemtestsHTSEB;
+end FileSystemChecksHTGDL;
