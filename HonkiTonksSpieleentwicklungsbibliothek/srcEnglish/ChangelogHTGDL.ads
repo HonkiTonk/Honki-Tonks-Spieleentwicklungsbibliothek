@@ -1,9 +1,16 @@
 package ChangelogHTGDL is
    pragma Pure;
    
-   -- Version 0.01.2000 => 0.01. (.2025):
+   -- Version 0.01.2050 => 0.01. (.2025):
    
    -- 
+   
+   
+   
+   -- Version 0.01.2000 => 0.01.2050 (25.08.2025):
+   
+   -- Revised some data types.
+   -- Added some comments.
    
    
    

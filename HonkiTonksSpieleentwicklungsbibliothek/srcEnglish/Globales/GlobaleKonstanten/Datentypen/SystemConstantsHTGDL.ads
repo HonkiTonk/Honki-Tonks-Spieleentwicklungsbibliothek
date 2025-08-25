@@ -15,5 +15,6 @@ package SystemConstantsHTGDL is
    
    EmptyOneByteSign : constant SystemDataTypesHTGDL.OneByteSign := 0;
    EmptyTwoByteSign : constant SystemDataTypesHTGDL.TwoByteSign := 0;
+   EmptyFourByteSign : constant SystemDataTypesHTGDL.FourByteSign := 0;
 
 end SystemConstantsHTGDL;

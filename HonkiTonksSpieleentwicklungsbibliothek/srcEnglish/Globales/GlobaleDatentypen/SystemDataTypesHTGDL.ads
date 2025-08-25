@@ -35,8 +35,8 @@ package SystemDataTypesHTGDL is
    type ZeroToHundred is range 0 .. 100;
    subtype OneToHundred is ZeroToHundred range 1 .. ZeroToHundred'Last;
    
-   subtype LoadingTime is Float range 0.00 .. 100.00;
-   subtype LoadingTimeExisting is LoadingTime range 1.00 .. LoadingTime'Last;
+   subtype LoadingTimeBasis is Float range 0.00 .. 100.00;
+   subtype LoadingTimeExisting is LoadingTimeBasis range 1.00 .. LoadingTimeBasis'Last;
    
    
    
@@ -47,11 +47,12 @@ package SystemDataTypesHTGDL is
    
    
    
-   type OneByte is mod 2**8;
-   type TwoByte is mod 2**16;
-   type FourByte is mod 2**32;
+   type OneByte is mod 2**8; -- 0 .. 255
+   type TwoByte is mod 2**16; -- 0 .. 65_535
+   type FourByte is mod 2**32; -- 0 .. 4_294_967_295
    
-   type OneByteSign is range -128 .. 127;
-   type TwoByteSign is range -32_768 .. 32_767;
+   type OneByteSign is range -2**7 .. (2**7) - 1; -- -128 .. 127
+   type TwoByteSign is range -2**15 .. (2**15) - 1; -- -32_768 .. 32_767
+   type FourByteSign is range -2**31 .. (2**31) - 1; -- -2_147_483_648 .. 2_147_483_647
 
 end SystemDataTypesHTGDL;
