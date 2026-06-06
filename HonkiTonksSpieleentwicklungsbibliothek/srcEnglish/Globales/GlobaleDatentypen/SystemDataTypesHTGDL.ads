@@ -54,5 +54,10 @@ package SystemDataTypesHTGDL is
    type OneByteSign is range -2**7 .. (2**7) - 1; -- -128 .. 127
    type TwoByteSign is range -2**15 .. (2**15) - 1; -- -32_768 .. 32_767
    type FourByteSign is range -2**31 .. (2**31) - 1; -- -2_147_483_648 .. 2_147_483_647
+   
+   subtype SixtyFourElements is OwnPositive range OwnPositive'First .. 64;
+   subtype ThirtyTwoElements is SixtyFourElements range SixtyFourElements'First .. 32;
+   subtype SixteenElements is ThirtyTwoElements range ThirtyTwoElements'First .. 16;
+   subtype EightElements is SixteenElements range SixteenElements'First .. 8;
 
 end SystemDataTypesHTGDL;
