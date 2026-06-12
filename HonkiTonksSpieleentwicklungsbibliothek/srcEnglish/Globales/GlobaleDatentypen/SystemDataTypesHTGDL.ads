@@ -56,8 +56,15 @@ package SystemDataTypesHTGDL is
    type FourByteSign is range -2**31 .. (2**31) - 1; -- -2_147_483_648 .. 2_147_483_647
    
    subtype SixtyFourElements is OwnPositive range OwnPositive'First .. 64;
-   subtype ThirtyTwoElements is SixtyFourElements range SixtyFourElements'First .. 32;
-   subtype SixteenElements is ThirtyTwoElements range ThirtyTwoElements'First .. 16;
-   subtype EightElements is SixteenElements range SixteenElements'First .. 8;
+   subtype ThirtyTwoElements is SixtyFourElements range SixtyFourElements'First .. SixtyFourElements'Last / 2;
+   subtype SixteenElements is ThirtyTwoElements range ThirtyTwoElements'First .. ThirtyTwoElements'Last / 2;
+   subtype EightElements is SixteenElements range SixteenElements'First .. SixteenElements'Last / 2;
+   
+   
+   
+   type Runthroughs10000 is range 1 .. 10_000;
+   subtype Runthroughs1000 is Runthroughs10000 range Runthroughs10000'First .. Runthroughs10000'Last / 10;
+   subtype Runthroughs100 is Runthroughs1000 range Runthroughs1000'First .. Runthroughs1000'Last / 10;
+   subtype Runthroughs10 is Runthroughs100 range Runthroughs100'First .. Runthroughs100'Last / 10;
 
 end SystemDataTypesHTGDL;
