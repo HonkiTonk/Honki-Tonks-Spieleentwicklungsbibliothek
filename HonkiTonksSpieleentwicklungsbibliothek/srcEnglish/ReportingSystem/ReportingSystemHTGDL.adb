@@ -9,7 +9,7 @@ package body ReportingSystemHTGDL is
      (ReportExtern : in Wide_Wide_String)
    is begin
       
-      ReportWritingHTGDL.Report (ReportExtern => LogicError & ReportExtern);
+      ReportWritingHTGDL.ReportUTF (ReportExtern => LogicError & ReportExtern);
       
       case
         ReportVariablesHTGDL.ErrorMessageQuery
@@ -30,7 +30,7 @@ package body ReportingSystemHTGDL is
      (ReportExtern : in Wide_Wide_String)
    is begin
          
-      ReportWritingHTGDL.Report (ReportExtern => GraphicError & ReportExtern);
+      ReportWritingHTGDL.ReportUTF (ReportExtern => GraphicError & ReportExtern);
       
       case
         ReportVariablesHTGDL.ErrorMessageQuery
@@ -51,7 +51,7 @@ package body ReportingSystemHTGDL is
      (ReportExtern : in Wide_Wide_String)
    is begin
       
-      ReportWritingHTGDL.Report (ReportExtern => MusicError & ReportExtern);
+      ReportWritingHTGDL.ReportUTF (ReportExtern => MusicError & ReportExtern);
       
       case
         ReportVariablesHTGDL.ErrorMessageQuery
@@ -72,7 +72,7 @@ package body ReportingSystemHTGDL is
      (ReportExtern : in Wide_Wide_String)
    is begin
       
-      ReportWritingHTGDL.Report (ReportExtern => SoundError & ReportExtern);
+      ReportWritingHTGDL.ReportUTF (ReportExtern => SoundError & ReportExtern);
       
       case
         ReportVariablesHTGDL.ErrorMessageQuery
@@ -93,7 +93,7 @@ package body ReportingSystemHTGDL is
      (ReportExtern : in Wide_Wide_String)
    is begin
       
-      ReportWritingHTGDL.Report (ReportExtern => OtherError & ReportExtern);
+      ReportWritingHTGDL.ReportUTF (ReportExtern => OtherError & ReportExtern);
       
       case
         ReportVariablesHTGDL.ErrorMessageQuery

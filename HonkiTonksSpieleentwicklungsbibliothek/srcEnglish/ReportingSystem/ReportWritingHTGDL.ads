@@ -2,8 +2,8 @@ private with Ada.Wide_Wide_Text_IO;
 
 package ReportWritingHTGDL is
    pragma Elaborate_Body;
-
-   procedure Report
+   
+   procedure ReportUTF
      (ReportExtern : in Wide_Wide_String)
      with
        Pre => (
@@ -22,8 +22,21 @@ private
    
    Reports : constant String (1 .. 7) := "Reports";
    
-   WaitingTime : constant Duration := 0.002;
+   
+
+   protected Write is
+      
+      procedure Report
+        (ReportExtern : in Wide_Wide_String)
+        with
+          Pre => (
+                    ReportExtern'Length > 0
+                 );
+      
+   private
          
-   FileReport : File_Type;
+      FileReport : File_Type;
+      
+   end Write;
 
 end ReportWritingHTGDL;
