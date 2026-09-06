@@ -9,7 +9,7 @@ package ReportVariablesHTGDL is
      (VersionNumberExtern : in Wide_Wide_String)
      with
        Pre => (
-                 VersionNumberExtern'Length = 9
+                 VersionNumberExtern'Length = 18
               );
    pragma Inline (ChangeVersionNumber);
    
@@ -23,7 +23,7 @@ package ReportVariablesHTGDL is
      return Wide_Wide_String
      with
        Post => (
-                  VersionNumberQuery'Result'Length = 9
+                  VersionNumberQuery'Result'Length = 18
                );
    pragma Inline (VersionNumberQuery);
    
@@ -31,6 +31,6 @@ private
    
    ErrorMessage : Boolean := True;
    
-   VersionNumber : Wide_Wide_String (1 .. 9) := "0.00.0000";
+   VersionNumber : Wide_Wide_String (1 .. 18) := "0.00.0000|SFML X.Y";
 
 end ReportVariablesHTGDL;

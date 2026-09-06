@@ -20,5 +20,14 @@ package SystemRecordsHTGDL is
       TextEntry : Unbounded_Wide_Wide_String;
       
    end record;
+   
+   
+
+   type CharacterEntryRecord is record
+      
+      SuccessfulAbortion : Boolean;
+      CharacterEntry : Wide_Wide_Character;
+      
+   end record;
 
 end SystemRecordsHTGDL;
