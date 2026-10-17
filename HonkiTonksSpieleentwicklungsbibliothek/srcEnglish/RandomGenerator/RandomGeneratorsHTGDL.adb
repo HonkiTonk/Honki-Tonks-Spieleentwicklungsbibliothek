@@ -77,5 +77,16 @@ package body RandomGeneratorsHTGDL is
       end if;
       
    end AchievedSuccesses;
+   
+   
+   
+   function HundredRange
+     return SystemDataTypesHTGDL.ZeroToHundred
+   is begin
+      
+      Hundred.Reset (Gen => HundredNumber);
+      return Hundred.Random (Gen => HundredNumber);
+      
+   end HundredRange;
 
 end RandomGeneratorsHTGDL;

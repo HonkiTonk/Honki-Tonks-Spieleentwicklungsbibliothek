@@ -1,16 +1,17 @@
 package ChangelogHTGDL is
    pragma Pure;
    
-   -- Version 0.01.2450 => 0.01.2 (..2026):
+   -- Version 0.01.2600 => 0.01.2 (..2026):
    
    -- 
    
    
    
-   -- Version 0.01.2400 => 0.01.2450 (06.09.2026):
+   -- Version 0.01.2450 => 0.01.2600 (17.10.2026):
    
-   -- CharacterEntryRecord added to SystemRecordsHTGDL.
-   -- SFML version added to the Version number.
+   -- Random generators expanded.
+   -- README reworked.
+   -- Added some "pragma Elaborate_Body".
    
    
    
