@@ -26,5 +26,7 @@ package TextConstantsHTGDL is
    
    StandardFolder : constant Unbounded_Wide_Wide_String := To_Unbounded_Wide_Wide_String (Source => "Standard");
    StandardDirectory : constant Unbounded_Wide_Wide_String := StandardFolder & "/";
+   
+   NoCharakterlimit : constant Natural := 0;
 
 end TextConstantsHTGDL;

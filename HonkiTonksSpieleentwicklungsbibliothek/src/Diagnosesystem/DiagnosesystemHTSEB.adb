@@ -44,6 +44,29 @@ package body DiagnosesystemHTSEB is
    end Zahl;
    
    
+   
+   procedure Zählen
+     (ZahlbestimmungExtern : in Boolean)
+   is begin
+      
+      case
+        ZahlbestimmungExtern
+      is
+         when True =>
+            ZählerEins := ZählerEins + 1;
+      
+            Zahl (ZahlExtern => ZählerEins);
+            
+         when False =>
+            ZählerZwei := ZählerZwei + 1;
+      
+            Zahl (ZahlExtern => ZählerZwei);
+      end case;
+      
+   end Zählen;
+   
+   
+   
    procedure Kommazahl
      (ZahlExtern : in Float)
    is

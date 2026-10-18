@@ -1,9 +1,17 @@
 package ChangelogHTGDL is
    pragma Pure;
    
-   -- Version 0.01.2600 => 0.01.2 (..2026):
+   -- Version 0.01.2750 => 0.01.2 (..2026):
    
    -- 
+   
+   
+   
+   -- Version 0.01.2600 => 0.01.2750 (18.10.2026):
+   
+   -- Expanded the diagnostic system.
+   -- DirectoryConstantsHTGDL reworked and expanded.
+   -- Improved the english translation.
    
    
    
