@@ -1,9 +1,16 @@
 package ChangelogHTGDL is
    pragma Pure;
    
-   -- Version 0.01.2750 => 0.01.2 (..2026):
+   -- Version 0.01.2850 => 0.01.2 (..2026):
    
    -- 
+   
+   
+   
+   -- Version 0.01.2750 => 0.01.2850 (03.11.2026):
+   
+   -- Reworked some Datentypes.
+   -- Added NumberRecordsHTSEB.
    
    
    

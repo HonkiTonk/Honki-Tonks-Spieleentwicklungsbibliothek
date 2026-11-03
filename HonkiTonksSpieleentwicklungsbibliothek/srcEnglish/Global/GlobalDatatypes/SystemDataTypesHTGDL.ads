@@ -32,7 +32,7 @@ package SystemDataTypesHTGDL is
    
    
       
-   type ZeroToHundred is range 0 .. 100;
+   subtype ZeroToHundred is Natural range 0 .. 100;
    subtype OneToHundred is ZeroToHundred range 1 .. ZeroToHundred'Last;
    
    subtype LoadingTimeBasis is Float range 0.00 .. 100.00;
